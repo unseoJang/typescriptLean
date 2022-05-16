@@ -21,7 +21,7 @@ interface Global {
   TotalRecovered: number;
 }
 
-interface Country {
+export interface Country {
   Country: string;
   CountryCode: string;
   Date: string;
