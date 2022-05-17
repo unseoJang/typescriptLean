@@ -1,4 +1,4 @@
-interface CountrySummaryInfo {
+export interface CountrySummaryInfo {
   Cases: number;
   City: string;
   CityCode: string;
@@ -11,7 +11,7 @@ interface CountrySummaryInfo {
   Status: string;
 }
 
-interface Global {
+export interface Global {
   Date: string;
   NewConfirmed: number;
   NewDeaths: number;
