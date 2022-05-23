@@ -15,7 +15,7 @@ import {
 } from './covid/index';
 
 // utils
-function $<T extends HTMLElement>(selector: string) {
+function $(selector: string) {
   return document.querySelector(selector);
 }
 function getUnixTimestamp(date: string | number | Date) {

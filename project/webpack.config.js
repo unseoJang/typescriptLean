@@ -1,22 +1,20 @@
-const path = require('path');
-const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+import { resolve } from 'path';
+import { ProgressPlugin } from 'webpack';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
-module.exports = {
-  mode: 'production',
-  entry: './src/app.ts',
-  output: {
-    filename: 'app.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  plugins: [new webpack.ProgressPlugin(), new CleanWebpackPlugin()],
+export const mode = 'production';
+export const entry = './src/app.ts';
+export const output = {
+  filename: 'app.js',
+  path: resolve(__dirname, 'dist'),
 };
+export const module = {
+  rules: [
+    {
+      test: /\.ts$/,
+      use: 'ts-loader',
+      exclude: /node_modules/,
+    },
+  ],
+};
+export const plugins = [new ProgressPlugin(), new CleanWebpackPlugin()];
