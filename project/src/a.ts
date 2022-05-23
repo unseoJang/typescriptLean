@@ -15,5 +15,5 @@ interface Hero {
 // capt.name = 'capt';
 // capt.skill = 'shield';
 
-const a: string | null;
-a!
+// const a: string | null;
+// a!
